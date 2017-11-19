@@ -7,13 +7,10 @@ package codigo;
 
 /**
  *
- * @author 6248489
+ * @author Gustavo Nemeth
  */
 public class Calculo {
 
-    /* Alterar limites superiores e inferiores */
-    int limSuperior = 2;
-    int limInferior = 1;
     int i, j;
     double h;
     int loop;
@@ -33,19 +30,23 @@ public class Calculo {
     }
 
     public void calculo() {
+
+        /* Alterar limites superiores e inferiores */
+        double limSuperior = 2.0;
+        double limInferior = 1.0;
         loop = 1;
 
         do {
             h = (limSuperior - limInferior) / loop;
+            System.out.println("LOOP:" + loop);
             System.out.println("h = " + h);
 
             /* Gerar o array */
             double array[] = new double[loop + 1];
-            double diferenca = limSuperior - limInferior / loop;
             for (j = 0; j < loop + 1; j++) {
-                array[j] = limInferior + (diferenca * j);
+                array[j] = limInferior + (h * j);
             }
-
+            
             for (double b : array) {
                 System.out.println(b);
             }
