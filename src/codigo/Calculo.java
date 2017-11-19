@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package codigo;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +14,7 @@ public class Calculo {
     double meio = 0;
     double ultimoResultado = 0;
     double resultado = 0;
+    double TAXA_ERRO = 0.01; 
 
     public Calculo() {
         /* Por algum motivo o programa não considerou a atribuição global */
@@ -68,8 +66,8 @@ public class Calculo {
 
             array = null;
             loop++;
-        } while (erro(resultado) > 0.01);
-
+        } while (erro(resultado) > TAXA_ERRO);
+        JOptionPane.showMessageDialog(null, "Resultado: "+resultado);
     }
 
     /* Arrumar */
