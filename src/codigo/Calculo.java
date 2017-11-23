@@ -14,8 +14,10 @@ public class Calculo {
     double meio = 0;
     double ultimoResultado = 0;
     double resultado = 0;
-    double TAXA_ERRO = 0.01; 
+    double TAXA_ERRO = 0.00001; 
 
+    // Teste no Wolfran Alpha:
+    // integrate sin (x^(1/3 )) from [0.0, 0.24]
     public Calculo() {
         /* Por algum motivo o programa não considerou a atribuição global */
         ultimoResultado = 0;
