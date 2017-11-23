@@ -23,15 +23,17 @@ public class Calculo {
 
     /* Alterar para a formula pedida */
     public double formula(double valor) {
-        return valor * 2;
+        return Math.sin(Math.cbrt(valor));
 
     }
 
+    // Exercício 2-A: Seno da raiz cúbica de X, limites em 0.0 e 0.24
+    
     public void calculo() {
 
         /* Alterar limites superiores e inferiores */
-        double limSuperior = 2.0;
-        double limInferior = 1.0;
+        double limSuperior = 0.24;
+        double limInferior = 0.0;
         loop = 1;
 
         do {
